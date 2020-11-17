@@ -1,0 +1,61 @@
+$wrapper: 400px;
+$mobile-wrapper:300px;
+
+.intro-wrapper{
+  min-height: $wrapper;
+  width: $wrapper;
+  @extend .centered-flex;
+  position: relative;
+  margin-bottom: 20px;
+  
+  .intro-bg{
+    background-image: url('../assets/durga-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    @extend .full-size;
+    animation:spin 16.5s linear infinite;
+    position: absolute;
+  }
+
+  .intro-body{
+    z-index: 9999;
+
+    img{
+      width: $wrapper;
+      height: auto;
+      animation:slide 3.5s cubic-bezier(0.075, 0.82, 0.165, 1) 1;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@media screen and (max-width:600px){
+  .intro-wrapper{
+    min-height: $mobile-wrapper;
+    width: $mobile-wrapper;
+
+    .intro-body{
+      img{
+        width: $mobile-wrapper;
+      }
+    }
+  }
+}
+
+//animation
+@keyframes slide{
+  from{ 
+    margin-bottom: -5000px;
+    opacity: 0;
+  }
+  to{
+    margin-bottom: 0px;
+    opacity: 1;
+  }	
+}
+
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+}
+

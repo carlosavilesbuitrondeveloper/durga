@@ -1,24 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+//components
+import Interaction from './components/Interaction';
+import Intro from './components/Intro';
+import Headline from './components/Headlne';
+import SubHeadline from './components/SubHeadline';
+import Background from './components/Background';
+
+const App:React.FC = ()=>{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Background />
+
+      <Headline copy="Durga Purga" />
+      <SubHeadline copy="NYC 2021 : October 11-15" />
+
+      <Intro />
+      <Interaction />
+  
     </div>
   );
 }

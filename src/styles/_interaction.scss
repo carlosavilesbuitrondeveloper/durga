@@ -1,0 +1,21 @@
+.interaction{
+    @extend .front;
+  
+    button{
+      width: 400px;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 15px 0;
+      color: white;
+      text-transform: uppercase;
+    }
+}
+
+@media screen and (max-width:600px){
+    .interaction{
+        button{
+            width: 280px;  
+            font-size: 1.2rem;
+        }
+    }
+}

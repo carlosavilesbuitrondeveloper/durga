@@ -1,0 +1,33 @@
+.bg-image{
+    background-image: url("../assets/india-bg-02.jpg");
+  
+    animation: blur 4s ease 0s 1;
+    -webkit-animation: blur 4s ease 0s 1;
+    -moz-animation: blur 4s ease 0s 1;  
+    animation-fill-mode: forwards;
+    background-size: cover;
+  
+    height: 100%;
+    width: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+  
+@keyframes blur {
+    from{
+        -webkit-filter: blur(0px);
+        -moz-filter: blur(0px);
+        -o-filter: blur(0px);
+        -ms-filter: blur(0px);
+    }
+    to{
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+    }
+}
+  
